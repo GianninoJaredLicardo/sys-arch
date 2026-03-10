@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up - CCS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="/" class="back-btn" style="background: #d9534f; color: white; padding: 5px 10px; text-decoration: none; border-radius: 4px; margin: 20px; display: inline-block;">Back</a>
+
+    <h1 style="text-align: center;">Sign up</h1>
+
+    <div class="register-container" style="display: flex; justify-content: space-around; align-items: center; max-width: 1000px; margin: auto;">
+        
+        <form action="/register" method="POST" style="display: flex; flex-direction: column; width: 40%;">
+            <label>ID Number</label>
+            <input type="text" name="idNumber" required>
+
+            <label>Last Name</label>
+            <input type="text" name="lastName" required>
+
+            <label>First Name</label>
+            <input type="text" name="firstName" required>
+
+            <label>Middle Name</label>
+            <input type="text" name="middleName">
+
+            <label>Course Level</label>
+            <input type="text" name="courseLevel" value="1">
+
+            <label>Password</label>
+            <input type="password" name="password" required>
+
+            <label>Repeat your password</label>
+            <input type="password" name="confirmPassword" required>
+
+            <label>Email</label>
+            <input type="email" name="email" required>
+
+            <label>Course</label>
+            <input type="text" name="course" value="BSIT">
+
+            <label>Address</label>
+            <input type="text" name="address">
+
+            <button type="submit" style="background: #007bff; color: white; margin-top: 20px; padding: 10px; border: none; cursor: pointer;">Register</button>
+        </form>
+
+        <div class="illustration">
+            <img src="/register_illustration.png" alt="Sign up illustration" width="400">
+        </div>
+    </div>
+</body>
+</html>
