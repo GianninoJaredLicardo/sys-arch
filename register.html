@@ -1,54 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Sign Up - CCS</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign Up - CCS Sit-in System</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+<style>
+body { background-color: #f8f9fa; font-family: sans-serif; }
+.register-container { max-width: 900px; margin: 50px auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.back-btn { background-color: #dc3545; color: white; border: none; padding: 5px 15px; border-radius: 5px; text-decoration: none; }
+.form-label { font-size: 0.85rem; margin-bottom: 2px; color: #555; }
+.form-control { margin-bottom: 15px; border-radius: 4px; border: 1px solid #ced4da; }
+.illustration-side { display: flex; align-items: center; justify-content: center; }
+.illustration-side img { max-width: 100%; height: auto; }
+.btn-register { background-color: #007bff; border: none; width: 120px; }
+</style>
 </head>
 <body>
-    <a href="/" class="back-btn" style="background: #d9534f; color: white; padding: 5px 10px; text-decoration: none; border-radius: 4px; margin: 20px; display: inline-block;">Back</a>
 
-    <h1 style="text-align: center;">Sign up</h1>
+<div class="container register-container">
+<a href="index.html" class="back-btn">Back</a>
 
-    <div class="register-container" style="display: flex; justify-content: space-around; align-items: center; max-width: 1000px; margin: auto;">
-        
-        <form action="/register" method="POST" style="display: flex; flex-direction: column; width: 40%;">
-            <label>ID Number</label>
-            <input type="text" name="idNumber" required>
+<div class="row mt-3">
+<!-- Left Side: Form -->
+<div class="col-md-6">
+<h2 class="fw-bold mb-4">Sign up</h2>
+<form action="/register" method="POST">
+<label class="form-label">ID Number</label>
+<input type="text" class="form-control">
 
-            <label>Last Name</label>
-            <input type="text" name="lastName" required>
+<label class="form-label">Last Name</label>
+<input type="text" class="form-control">
 
-            <label>First Name</label>
-            <input type="text" name="firstName" required>
+<label class="form-label">First Name</label>
+<input type="text" class="form-control">
 
-            <label>Middle Name</label>
-            <input type="text" name="middleName">
+<label class="form-label">Middle Name</label>
+<input type="text" class="form-control">
 
-            <label>Course Level</label>
-            <input type="text" name="courseLevel" value="1">
+<label class="form-label" for="course_level">Course Level</label>
+<select class="form-select" id="course_level" name="course_level" style="margin-bottom: 15px;">
+<option value="" selected disabled>Select Year Level</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+</select>
 
-            <label>Password</label>
-            <input type="password" name="password" required>
+<label class="form-label" for="course_level">Course Level</label>
+<select class="form-select" id="course_level" name="course_level" style="margin-bottom: 15px;">
+<option value="" selected disabled>Select Course</option>
+<option value="1">Bachelor of Science in Information Technology</option>
+<option value="2">Bachelor of Science in Computer Science</option>
+<option value="3">Bachelor of Science in Information Systems</option>
+</select>
 
-            <label>Repeat your password</label>
-            <input type="password" name="confirmPassword" required>
+<label class="form-label">Password</label>
+<input type="password" class="form-control">
 
-            <label>Email</label>
-            <input type="email" name="email" required>
+<label class="form-label">Repeat your password</label>
+<input type="password" class="form-control">
 
-            <label>Course</label>
-            <input type="text" name="course" value="BSIT">
+<label class="form-label">Email</label>
+<input type="email" class="form-control">
 
-            <label>Address</label>
-            <input type="text" name="address">
+<label class="form-label">Address</label>
+<input type="text" class="form-control">
 
-            <button type="submit" style="background: #007bff; color: white; margin-top: 20px; padding: 10px; border: none; cursor: pointer;">Register</button>
-        </form>
+<button type="submit" class="btn btn-primary btn-register mt-2">Register</button>
+</form>
+</div>
 
-        <div class="illustration">
-            <img src="/register_illustration.png" alt="Sign up illustration" width="400">
-        </div>
-    </div>
+</div>
+</div>
+
 </body>
 </html>
