@@ -1,99 +1,4 @@
-body{
-    margin:0;
-    font-family: Arial, Helvetica, sans-serif;
-    background:#f4f4f4;
-}
-
-/* NAVBAR */
-.navbar{
-    background:#1f5aa6;
-    color:white;
-    padding:15px 40px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-.navbar h2{
-    margin:0;
-    font-size:18px;
-}
-
-.nav-links a{
-    color:white;
-    text-decoration:none;
-    margin-left:20px;
-    font-size:14px;
-}
-
-/* MAIN */
-.container{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding:50px;
-}
-
-.logo{
-    flex:1;
-    text-align:center;
-}
-
-.logo img{
-    width:400px;
-}
-
-/* LOGIN FORM */
-.login-box{
-    flex:1;
-    max-width:400px;
-    background:white;
-    padding:30px;
-    border-radius:6px;
-    box-shadow:0 0 5px rgba(0,0,0,0.1);
-}
-
-.login-box input{
-    width:100%;
-    padding:12px;
-    margin:10px 0;
-    border:1px solid #ccc;
-    border-radius:4px;
-}
-
-.login-box label{
-    font-size:14px;
-}
-
-.login-options{
-    display:flex;
-    justify-content:space-between;
-    font-size:13px;
-    margin-bottom:15px;
-}
-
-.login-btn{
-    width:100%;
-    padding:12px;
-    background:#1f5aa6;
-    border:none;
-    color:white;
-    font-size:16px;
-    border-radius:5px;
-    cursor:pointer;
-}
-
-.register{
-    text-align:center;
-    margin-top:10px;
-    font-size:14px;
-}
-
-.register a{
-    color:red;
-    text-decoration:none;
-}
-/* --- PREVIOUS STYLES (Keep These) --- */
+/* --- GLOBAL STYLES --- */
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -104,7 +9,7 @@ body {
 .navbar {
     background: #1f5aa6;
     color: white;
-    padding: 15px 40px;
+    padding: 2px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -112,7 +17,7 @@ body {
 
 .navbar h2 {
     margin: 0;
-    font-size: 18px;
+    font-size: 28px;
 }
 
 .nav-links a {
@@ -128,17 +33,63 @@ body {
     justify-content: center;
     align-items: center;
     padding: 50px;
-    gap: 40px; /* Space between form and image */
+    gap: 40px; 
 }
 
-/* --- REGISTRATION SPECIFIC STYLES --- */
-.register-box {
+/* SHARED FORM ELEMENTS */
+.login-box, .register-box {
     flex: 1;
-    max-width: 450px;
     background: white;
     padding: 30px;
     border-radius: 6px;
     box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.login-btn, .register-btn {
+    width: 100%;
+    padding: 12px;
+    background: #1f5aa6;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* --- LOGIN SPECIFIC --- */
+.login-box {
+    max-width: 400px;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.login-options {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.register {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.register a {
+    color: red;
+    text-decoration: none;
+}
+
+/* --- REGISTRATION SPECIFIC --- */
+.register-box {
+    max-width: 450px;
 }
 
 .register-box h2 {
@@ -176,25 +127,14 @@ body {
     margin-top: 4px;
 }
 
-.register-btn {
-    width: 100%;
-    padding: 12px;
-    background: #1f5aa6; /* Matching your navbar blue */
-    border: none;
-    color: white;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-/* IMAGE SECTION */
-.illustration-side {
+/* IMAGE / ILLUSTRATION SECTION */
+.logo, .illustration-side {
     flex: 1;
     text-align: center;
 }
 
-.illustration-side img {
+.logo img, .illustration-side img {
     max-width: 100%;
+    width: 400px;
     height: auto;
 }
