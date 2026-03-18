@@ -5,38 +5,47 @@ body {
     background: #f4f4f4;
 }
 
-/* NAVBAR */
+/* --- NAVBAR --- */
 .navbar {
     background: #1f5aa6;
     color: white;
-    padding: 2px 30px;
+    padding: 15px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.navbar h2 {
-    margin: 0;
-    font-size: 28px;
+
+.navbar h1 {
+    margin: 5;
+    font-size: 18px;
 }
+
+
 
 .nav-links a {
     color: white;
+
     text-decoration: none;
-    margin-left: 20px;
+    margin-right: 23px;
+    margin-left: 23px;
     font-size: 14px;
 }
+.nav-links a:hover {
+    color: #ffd700; /* Changes text to gold */
+    
+}
 
-/* MAIN CONTAINER (Shared) */
+/* --- SHARED LAYOUT COMPONENTS --- */
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 50px;
-    gap: 40px; 
+    gap: 40px; /* Space between form and illustration */
 }
 
-/* SHARED FORM ELEMENTS */
+/* Shared Form Box Styling */
 .login-box, .register-box {
     flex: 1;
     background: white;
@@ -45,6 +54,17 @@ body {
     box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
 
+/* Shared Input Styling */
+.login-box input, .register-box input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Prevents padding from affecting width */
+}
+
+/* Shared Button Styling */
 .login-btn, .register-btn {
     width: 100%;
     padding: 12px;
@@ -56,17 +76,21 @@ body {
     cursor: pointer;
 }
 
-/* --- LOGIN SPECIFIC --- */
-.login-box {
-    max-width: 400px;
+/* Shared Illustration/Logo Side */
+.logo, .illustration-side {
+    flex: 1;
+    text-align: center;
 }
 
-.login-box input {
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+.logo img, .illustration-side img {
+    max-width: 100%;
+    height: auto;
+    width: 400px; /* Keeping your specific logo width */
+}
+
+/* --- LOGIN SPECIFIC STYLES --- */
+.login-box {
+    max-width: 400px;
 }
 
 .login-options {
@@ -87,7 +111,7 @@ body {
     text-decoration: none;
 }
 
-/* --- REGISTRATION SPECIFIC --- */
+/* --- REGISTRATION SPECIFIC STYLES --- */
 .register-box {
     max-width: 450px;
 }
@@ -112,29 +136,9 @@ body {
     margin-bottom: 15px;
 }
 
-.register-box input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
 .register-box label {
     display: block;
     font-size: 12px;
     color: #666;
     margin-top: 4px;
-}
-
-/* IMAGE / ILLUSTRATION SECTION */
-.logo, .illustration-side {
-    flex: 1;
-    text-align: center;
-}
-
-.logo img, .illustration-side img {
-    max-width: 100%;
-    width: 400px;
-    height: auto;
 }
